@@ -22,7 +22,7 @@ const App: React.FC = () => {
       setTimeout(() => {
         setIsLoading(false);
         setIsSearched(true);
-      },); // Add a delay here for loading animation
+      },); 
     }, 200);
   };
 
@@ -61,9 +61,10 @@ const App: React.FC = () => {
               </div>
               <div className="my-4 text-start text-[20px] font-bold text-white">จะไปยังไงดี ?</div>
               <div className="flex flex-col gap-4 p-2">
-                {from === "สถานี BTS สยาม" && to === "ลาดกระบัง" && (
+                {from === "สถานี BTS สยาม" && to === "สถานีลาดกระบัง" && (
                   <>
                     <RouteCard
+                      id="bts-siam-ladkrabang-1"
                       from={from} to={to}
                       time="1 ชั่วโมง 5 นาที"
                       duration="25.9 km"
@@ -75,6 +76,7 @@ const App: React.FC = () => {
                       ]}
                     />
                     <RouteCard
+                      id="bts-siam-ladkrabang-2"
                       from={from} to={to}
                       time="1 ชั่วโมง 34 นาที"
                       duration="26.4 km"
@@ -84,19 +86,36 @@ const App: React.FC = () => {
                         { icon: <FaBus />, label: 'ปอ. 517' },
                       ]}
                     />
+                  <RouteCard
+                    id="bts-siam-ladkrabang-3"
+                    from="BTS สยาม"
+                    to="ลาดกระบัง"
+                    time="1 ชั่วโมง 9 นาที"
+                    duration="28.1 km"
+                    price="33 บาท"
+                    vehicles={[
+                      { 
+                        icon: <FaTrain />, 
+                        label: 'BTS สยาม', 
+                      },
+                      { 
+                        icon: <FaTrain />, 
+                        label: 'พญาไท', 
+                      },
+                      { 
+                        icon: <FaBus />, 
+                        label: 'รถเมล์ 1-80E', 
+                      },
+                      { 
+                        icon: <FaBus />, 
+                        label: 'ปอ. 517', 
+                        stops: ['พระโขนง', 'อ่อนนุช', 'ลาดกระบัง'] 
+                      },
+                    ]}
+                  />
+
                     <RouteCard
-                      from={from} to={to}
-                      time="1 ชั่วโมง 9 นาที"
-                      duration="28.1 km"
-                      price="33 บาท"
-                      vehicles={[
-                        { icon: <FaTrain />, label: 'BTS สยาม' },
-                        { icon: <FaTrain />, label: 'พญาไทย' },
-                        { icon: <FaBus />, label: 'รถเมล์ 1-80E' },
-                        { icon: <FaBus />, label: 'ปอ. 517' },
-                      ]}
-                    />
-                    <RouteCard
+                    id="bts-siam-ladkrabang-4"
                       from={from} to={to}
                       time="1 ชั่วโมง 30 นาที"
                       duration="30.8 km"
@@ -109,60 +128,58 @@ const App: React.FC = () => {
                     />
                   </>
                 )}
-                {from === "ลาดกระบัง" && to === "สถานี BTS สยาม" && (
+                  {from === "สถานีลาดกระบัง" && to === "Bts พญาไทย" && (
                   <>
                     <RouteCard
+                      id="ladkrabrang-payathai-1"
                       from={from} to={to}
-                      time="xx ชั่วโมง xx นาที"
-                      duration="xx km"
-                      price="xx บาท"
+                      time="1 ชั่วโมง 40 นาที"
+                      duration="24.3 km"
+                      price="65 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'รถเมล์ 517' },
-                        { icon: <FaBus />, label: 'รถเมล์ 3-26E (537)' },
-                        { icon: <FaBus />, label: 'รถเมล์ 29' },
+                        { image: '/items/apl.png', label: 'Apl ลาดกระบัง' },
                       ]}
                     />
                     <RouteCard
+                      id="ladkrabrang-payathai-2"
                       from={from} to={to}
-                      time="xx ชั่วโมง xx นาที"
-                      duration="xx km"
-                      price="xx บาท"
+                      time="1 ชั่วโมง 34 นาที"
+                      duration="26.4 km"
+                      price="15 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'รถเมล์ 517' },
-                        { icon: <FaBus />, label: 'รถเมล์ 73' },
+                        { icon: <FaBus />, label: 'รถเมล์ 54 (549)' },
+                        { icon: <FaBus />, label: 'ปอ. 517' },
+                        { icon: <FaTrain />, label: 'BTS อนุสาวรีย์' },
+                        { icon: <FaBus />, label: 'พญาไทย' },
                       ]}
                     />
-                    <RouteCard
-                      from={from} to={to}
-                      time="xx ชั่วโมง xx นาที"
-                      duration="xx km"
-                      price="xx บาท"
-                      vehicles={[
-                        { icon: <FaBus />, label: 'รถเมล์ 517' },
-                        { icon: <FaBus />, label: 'รถเมล์ 501' },
-                      ]}
-                    />
-                    <RouteCard
-                      from={from} to={to}
-                      time="xx ชั่วโมง xx นาที"
-                      duration="xx km"
-                      price="xx บาท"
-                      vehicles={[
-                        { icon: <FaBus />, label: 'ต.126' },
-                        { icon: <FaBus />, label: 'รถเมล์ 79' },
-                      ]}
-                    />
-                    <RouteCard
-                      from={from} to={to}
-                      time="xx ชั่วโมง xx นาที"
-                      duration="xx km"
-                      price="xx บาท"
-                      vehicles={[
-                        { icon: <FaTrain />, label: 'APL ลาดกระบัง' },
-                        { icon: <FaTrain />, label: 'พญาไท' },
-                        { icon: <FaBus />, label: 'รถเมล์ 73' },
-                      ]}
-                    />
+                  <RouteCard
+                    id="ladkrabrang-payathai-3"
+                    from="BTS สยาม"
+                    to="ลาดกระบัง"
+                    time="1 ชั่วโมง 9 นาที"
+                    duration="28.1 km"
+                    price="33 บาท"
+                    vehicles={[
+                      { 
+                        icon: <FaTrain />, 
+                        label: 'BTS สยาม', 
+                      },
+                      { 
+                        icon: <FaTrain />, 
+                        label: 'พญาไท', 
+                      },
+                      { 
+                        icon: <FaBus />, 
+                        label: 'รถเมล์ 1-80E', 
+                      },
+                      { 
+                        icon: <FaBus />, 
+                        label: 'ปอ. 517', 
+                        stops: ['พระโขนง', 'อ่อนนุช', 'ลาดกระบัง'] 
+                      },
+                    ]}
+                  />
                   </>
                 )}
               </div>

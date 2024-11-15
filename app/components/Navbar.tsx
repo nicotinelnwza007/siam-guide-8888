@@ -28,8 +28,8 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex gap-8 items-center font-bold">
-          <Link href="#about-me" className="Link" >หน้าหลัก</Link>
-          <Link href="/" className="Link" >รายการโปรด</Link>
+          <Link href="/" className="Link" >หน้าหลัก</Link>
+          <Link href="Like" className="Link" >รายการโปรด</Link>
           <Link href="#qandme" className="Link" >โปรไฟล์</Link>
         </div>
         <div className="hidden md:flex gap-4">
@@ -51,7 +51,7 @@ const Navbar = () => {
         />
         หน้าหลัก
       </Link>
-      <Link href="#Package" className="flex justify-center items-center py-2 gap-4 text-lg font-bold" onClick={toggleMenu}>
+      <Link href="Like" className="flex justify-center items-center py-2 gap-4 text-lg font-bold" onClick={toggleMenu}>
         <Image
           src="/items/heart.svg"
           width={20}
