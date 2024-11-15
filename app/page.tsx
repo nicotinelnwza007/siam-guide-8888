@@ -76,62 +76,91 @@ const App: React.FC = () => {
                     />
                     <RouteCard
                       from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      time="1 ชั่วโมง 34 นาที"
+                      duration="26.4 km"
+                      price="15 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        { icon: <FaBus />, label: 'รถเมล์ 2-34' },
+                        { icon: <FaBus />, label: 'ปอ. 517' },
                       ]}
                     />
                     <RouteCard
                       from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      time="1 ชั่วโมง 9 นาที"
+                      duration="28.1 km"
+                      price="33 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        { icon: <FaTrain />, label: 'BTS สยาม' },
+                        { icon: <FaTrain />, label: 'พญาไทย' },
+                        { icon: <FaBus />, label: 'รถเมล์ 1-80E' },
+                        { icon: <FaBus />, label: 'ปอ. 517' },
                       ]}
                     />
-
+                    <RouteCard
+                      from={from} to={to}
+                      time="1 ชั่วโมง 30 นาที"
+                      duration="30.8 km"
+                      price="39 บาท (ไม่รวมค่าแท๊กซี่)"
+                      vehicles={[
+                        { icon: <FaBus />, label: 'ปอ. 2-46' },
+                        { icon: <FaBus />, label: 'ต. 156' },
+                        { icon: <FaTaxi />, label: 'แท๊กซี่' },
+                      ]}
+                    />
                   </>
                 )}
                 {from === "ลาดกระบัง" && to === "สถานี BTS สยาม" && (
                   <>
                     <RouteCard
                       from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      time="xx ชั่วโมง xx นาที"
+                      duration="xx km"
+                      price="xx บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        { icon: <FaBus />, label: 'รถเมล์ 517' },
+                        { icon: <FaBus />, label: 'รถเมล์ 3-26E (537)' },
+                        { icon: <FaBus />, label: 'รถเมล์ 29' },
                       ]}
                     />
                     <RouteCard
                       from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      time="xx ชั่วโมง xx นาที"
+                      duration="xx km"
+                      price="xx บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        { icon: <FaBus />, label: 'รถเมล์ 517' },
+                        { icon: <FaBus />, label: 'รถเมล์ 73' },
                       ]}
                     />
                     <RouteCard
                       from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      time="xx ชั่วโมง xx นาที"
+                      duration="xx km"
+                      price="xx บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        { icon: <FaBus />, label: 'รถเมล์ 517' },
+                        { icon: <FaBus />, label: 'รถเมล์ 501' },
+                      ]}
+                    />
+                    <RouteCard
+                      from={from} to={to}
+                      time="xx ชั่วโมง xx นาที"
+                      duration="xx km"
+                      price="xx บาท"
+                      vehicles={[
+                        { icon: <FaBus />, label: 'ต.126' },
+                        { icon: <FaBus />, label: 'รถเมล์ 79' },
+                      ]}
+                    />
+                    <RouteCard
+                      from={from} to={to}
+                      time="xx ชั่วโมง xx นาที"
+                      duration="xx km"
+                      price="xx บาท"
+                      vehicles={[
+                        { icon: <FaTrain />, label: 'APL ลาดกระบัง' },
+                        { icon: <FaTrain />, label: 'พญาไท' },
+                        { icon: <FaBus />, label: 'รถเมล์ 73' },
                       ]}
                     />
                   </>
