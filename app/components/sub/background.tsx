@@ -38,7 +38,7 @@ const Background = () => {
   }, []); // Empty dependency array to run only once on mount
 
   return (
-    <div className="fixed inset-0 min-h-screen w-full bg-gradient-to-b from-[#872941] to-[#2e1b51] overflow-hidden -z-10">
+    <div className="fixed inset-0 min-h-screen w-full bg-gradient-to-b from-[#531525] from-25% to-[#8C1A38] to-80%"">
       {stars}
     </div>
   );
