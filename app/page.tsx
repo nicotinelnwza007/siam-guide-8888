@@ -103,8 +103,8 @@ const App: React.FC = () => {
                     />
                     <RouteCard
                       id="bts-siam-ladkrabang-3"
-                      from="BTS สยาม"
-                      to="ลาดกระบัง"
+                      from={from}
+                      to={to}
                       time="1 ชั่วโมง 9 นาที"
                       duration="28.1 km"
                       price="33 บาท"
@@ -144,7 +144,7 @@ const App: React.FC = () => {
                     />
                   </>
                 )}
-                {from === "สถานีลาดกระบัง" && to === "Bts พญาไทย" && (
+                {from === "สถานีลาดกระบัง" && to === "สถานี BTS พญาไท" && (
                   <>
                     <RouteCard
                       id="ladkrabrang-payathai-1"
@@ -173,8 +173,8 @@ const App: React.FC = () => {
                     />
                     <RouteCard
                       id="ladkrabrang-payathai-3"
-                      from="BTS สยาม"
-                      to="ลาดกระบัง"
+                      from={from}
+                      to={to}
                       time="44 นาที"
                       duration="30.1 km"
                       price="43 บาท"

@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 text-white w-full max-w-[1200px] p-4 mx-auto md:p-8 z-50">
-      <div className="h-auto md:h-[80px] px-6 py-4 flex justify-between items-center bg-[#40121E]  outline-none  rounded-xl backdrop-blur-sm">
+      <div className="h-auto md:h-[80px] px-6 py-4 flex justify-between items-center bg-[#982A41]  outline-none  rounded-xl backdrop-blur-sm">
 
        <Link href="/"><div className="text-lg md:text-xl font-bold">PaiNgaiDee</div></Link> 
 

@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ from, to, setFrom, setTo }) => {
   const [isFromDropdownVisible, setFromDropdownVisible] = useState(false);
   const [isToDropdownVisible, setToDropdownVisible] = useState(false);
 
-  const searchHistory = ["สถานี BTS สยาม", "สถานีลาดกระบัง", "Bts พญาไทย"];
+  const searchHistory = ["สถานี BTS สยาม", "สถานีลาดกระบัง", "สถานี BTS พญาไท"];
 
   const handleSelectHistoryItem = (item: string, isFromField: boolean) => {
     if (isFromField) {
