@@ -30,7 +30,7 @@ const ProfileSettings = () => {
         {/* Fake Email Section */}
         <div className="mb-6">
           <div className="text-sm font-medium text-gray-600">Email</div>
-          <p className="text-lg font-semibold text-gray-800">johndoe@gmail.com</p>
+          <p className="text-lg font-semibold text-gray-800">imeklnwza@gmail.com</p>
         </div>
 
         {/* Change Password Section */}
