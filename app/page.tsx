@@ -73,7 +73,7 @@ const App: React.FC = () => {
               <div className="my-4 text-start text-[20px] font-bold text-white">
                 จะไปยังไงดี ?
               </div>
-              <div className="flex flex-col gap-4 p-2">
+              <div className="flex flex-col items-center justify-center mx-auto text-start gap-4 p-2">
                 {from === "สถานี BTS สยาม" && to === "สถานีลาดกระบัง" && (
                   <>
                     <RouteCard
@@ -85,8 +85,9 @@ const App: React.FC = () => {
                       price="65 บาท"
                       vehicles={[
                         { icon: <FaTrain />, label: "BTS สยาม" },
-                        { icon: <FaBus />, label: "พญาไทย" },
-                        { image: "/items/apl.png", label: "Apl ลาดกระบัง" },
+                        { icon: <FaTrain />, label: "BTS พญาไท" , stops :["เปลี่ยนสายไป ARL เดินไป 4 นาที"] },
+                        { image: "/items/ARL.png", label: "ARL พญาไท" , stops :["เปลี่ยนสายไป ARL"] },
+                        { image: "/items/ARL.png", label: "ARL ลาดกระบัง" },
                       ]}
                     />
                     <RouteCard
@@ -95,10 +96,9 @@ const App: React.FC = () => {
                       to={to}
                       time="1 ชั่วโมง 34 นาที"
                       duration="26.4 km"
-                      price="15 บาท"
+                      price="25 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: "รถเมล์ 2-34" },
-                        { icon: <FaBus />, label: "ปอ. 517" },
+                        { icon: <FaBus />, label: "ปอ. 517" , stops :["นั่งไปจนถึงลาดกระบัง"] },
                       ]}
                     />
                     <RouteCard
@@ -154,7 +154,7 @@ const App: React.FC = () => {
                       duration="24.3 km"
                       price="40 บาท"
                       vehicles={[
-                        { image: "/items/apl.png", label: "Apl ลาดกระบัง" },
+                        { image: "/items/ARL.png", label: "ARL ลาดกระบัง" },
                       ]}
                     />
                     <RouteCard
