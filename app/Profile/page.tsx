@@ -19,7 +19,7 @@ const ProfileSettings = () => {
       <div className="bg-[#D0B473] w-full max-w-md p-8 rounded-lg shadow-lg">
         <div className="flex justify-center mb-6">
           <img
-            src="/items/tobelogo.png" 
+            src="/profile.png" 
             alt="Profile Picture"
             className="w-32 h-32 rounded-full object-cover"
           />
