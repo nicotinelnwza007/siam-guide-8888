@@ -1,11 +1,17 @@
 "use client";
 
-import React, { useState } from 'react';
-import LoadingScreen from './components/Loading';
-import Image from 'next/image';
-import Hero from './components/Hero';
-import RouteCard from './components/sub/routecard';
-import { FaHeart, FaBus, FaTrain, FaTaxi, FaMapMarkerAlt } from 'react-icons/fa';
+import React, { useState } from "react";
+import LoadingScreen from "./components/Loading";
+import Image from "next/image";
+import Hero from "./components/Hero";
+import RouteCard from "./components/sub/routecard";
+import {
+  FaHeart,
+  FaBus,
+  FaTrain,
+  FaTaxi,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const App: React.FC = () => {
   const [isInitialLoading, setIsInitialLoading] = useState(false);
@@ -22,7 +28,7 @@ const App: React.FC = () => {
       setTimeout(() => {
         setIsLoading(false);
         setIsSearched(true);
-      },); // Add a delay here for loading animation
+      });
     }, 200);
   };
 
@@ -55,83 +61,132 @@ const App: React.FC = () => {
                   onClick={handleSearch}
                   className="flex justify-center items-center mt-8 p-2 w-[105px] bg-[#D0B473] rounded-lg font-bold text-md gap-2"
                 >
-                  <Image src="/items/Search.svg" width={20} height={20} alt="" />
+                  <Image
+                    src="/items/Search.svg"
+                    width={20}
+                    height={20}
+                    alt=""
+                  />
                   ค้นหา
                 </button>
               </div>
-              <div className="my-4 text-start text-[20px] font-bold text-white">จะไปยังไงดี ?</div>
+              <div className="my-4 text-start text-[20px] font-bold text-white">
+                จะไปยังไงดี ?
+              </div>
               <div className="flex flex-col gap-4 p-2">
-                {from === "สถานี BTS สยาม" && to === "ลาดกระบัง" && (
+                {from === "สถานี BTS สยาม" && to === "สถานีลาดกระบัง" && (
                   <>
                     <RouteCard
-                      from={from} to={to}
+                      id="bts-siam-ladkrabang-1"
+                      from={from}
+                      to={to}
                       time="1 ชั่วโมง 5 นาที"
                       duration="25.9 km"
                       price="65 บาท"
                       vehicles={[
-                        { icon: <FaTrain />, label: 'BTS สยาม' },
-                        { icon: <FaBus />, label: 'พญาไทย' },
-                        { image: '/items/apl.png', label: 'Apl ลาดกระบัง' },
+                        { icon: <FaTrain />, label: "BTS สยาม" },
+                        { icon: <FaBus />, label: "พญาไทย" },
+                        { image: "/items/apl.png", label: "Apl ลาดกระบัง" },
                       ]}
                     />
                     <RouteCard
-                      from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      id="bts-siam-ladkrabang-2"
+                      from={from}
+                      to={to}
+                      time="1 ชั่วโมง 34 นาที"
+                      duration="26.4 km"
+                      price="15 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        { icon: <FaBus />, label: "รถเมล์ 2-34" },
+                        { icon: <FaBus />, label: "ปอ. 517" },
                       ]}
                     />
                     <RouteCard
-                      from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      id="bts-siam-ladkrabang-3"
+                      from="BTS สยาม"
+                      to="ลาดกระบัง"
+                      time="1 ชั่วโมง 9 นาที"
+                      duration="28.1 km"
+                      price="33 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        {
+                          icon: <FaTrain />,
+                          label: "BTS สยาม",
+                        },
+                        {
+                          icon: <FaTrain />,
+                          label: "พญาไท",
+                        },
+                        {
+                          icon: <FaBus />,
+                          label: "รถเมล์ 1-80E",
+                        },
+                        {
+                          icon: <FaBus />,
+                          label: "ปอ. 517",
+                          stops: ["พระโขนง", "อ่อนนุช", "ลาดกระบัง"],
+                        },
                       ]}
                     />
 
+                    <RouteCard
+                      id="bts-siam-ladkrabang-4"
+                      from={from}
+                      to={to}
+                      time="1 ชั่วโมง 30 นาที"
+                      duration="30.8 km"
+                      price="39 บาท (ไม่รวมค่าแท๊กซี่)"
+                      vehicles={[
+                        { icon: <FaBus />, label: "ปอ. 2-46" },
+                        { icon: <FaBus />, label: "ต. 156" },
+                        { icon: <FaTaxi />, label: "แท๊กซี่" },
+                      ]}
+                    />
                   </>
                 )}
-                {from === "ลาดกระบัง" && to === "สถานี BTS สยาม" && (
+                {from === "สถานีลาดกระบัง" && to === "Bts พญาไทย" && (
                   <>
                     <RouteCard
-                      from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      id="ladkrabrang-payathai-1"
+                      from={from}
+                      to={to}
+                      time="1 ชั่วโมง 40 นาที"
+                      duration="24.3 km"
+                      price="40 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        { image: "/items/apl.png", label: "Apl ลาดกระบัง" },
                       ]}
                     />
                     <RouteCard
-                      from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      id="ladkrabrang-payathai-2"
+                      from={from}
+                      to={to}
+                      time="1 ชั่วโมง 42 นาที"
+                      duration="27.5 km"
+                      price="32 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        { icon: <FaBus />, label: "รถเมล์ 54 (549)" },
+                        { icon: <FaBus />, label: "ปอ. 517" },
+                        { icon: <FaTrain />, label: "BTS อนุสาวรีย์" },
+                        { icon: <FaBus />, label: "พญาไทย" },
                       ]}
                     />
                     <RouteCard
-                      from={from} to={to}
-                      time="12:00 PM"
-                      duration="2h"
-                      price="$20"
+                      id="ladkrabrang-payathai-3"
+                      from="BTS สยาม"
+                      to="ลาดกระบัง"
+                      time="44 นาที"
+                      duration="30.1 km"
+                      price="43 บาท"
                       vehicles={[
-                        { icon: <FaBus />, label: 'Bus 100' },
-                        { icon: <FaTrain />, label: 'Train 190' },
-                        { icon: <FaTaxi />, label: 'Taxi' },
+                        {
+                          icon: <FaBus />,
+                          label: "รถเมล์ ต.126",
+                        },
+                        {
+                          icon: <FaBus />,
+                          label: "รถเมล์ ปอ.1-7E",
+                        },
                       ]}
                     />
                   </>

@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ from, to, setFrom, setTo }) => {
   const [isFromDropdownVisible, setFromDropdownVisible] = useState(false);
   const [isToDropdownVisible, setToDropdownVisible] = useState(false);
 
-  const searchHistory = ["สถานี BTS สยาม", "ลาดกระบัง", "ไปรษณีย์ลาดกระบัง"];
+  const searchHistory = ["สถานี BTS สยาม", "สถานีลาดกระบัง", "Bts พญาไทย"];
 
   const handleSelectHistoryItem = (item: string, isFromField: boolean) => {
     if (isFromField) {
@@ -29,7 +29,6 @@ const Hero: React.FC<HeroProps> = ({ from, to, setFrom, setTo }) => {
       <h1 className='p-4 text-center text-[20px] font-bold text-white'>ไปไหนดี ?</h1>
       <div className="flex gap-4 items-start justify-center mx-auto">
         <div className="flex relative flex-col gap-4 items-start">
-          {/* From Input Field */}
           <div className="relative w-full">
             <div className="absolute left-[-30px] top-1/2 transform -translate-y-1/2">
               <Image src="/items/circle.svg" width={20} height={20} alt="" />
@@ -52,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ from, to, setFrom, setTo }) => {
                     onMouseDown={() => handleSelectHistoryItem(item, true)}
                     className="cursor-pointer flex items-center gap-2 p-1 hover:bg-[#ad9761] rounded-md"
                   >
-                    <Image src="/items/location.svg" width={14} height={14} alt="" />
+                    <Image src="/items/Pin.svg" width={14} height={14} alt="" />
                     {item}
                   </div>
                 ))}
@@ -81,14 +80,14 @@ const Hero: React.FC<HeroProps> = ({ from, to, setFrom, setTo }) => {
             />
             {isToDropdownVisible && (
               <div className="absolute top-[42px] left-0 w-full bg-[#D0B473] text-white rounded-md p-2 shadow-lg">
-                <p className="text-xs text-gray-200 mb-1">ค้นหาล่าสุด</p>
+                <p className="text-xs text-white mb-1">ค้นหาล่าสุด</p>
                 {searchHistory.map((item, index) => (
                   <div
                     key={index}
                     onMouseDown={() => handleSelectHistoryItem(item, false)}
                     className="cursor-pointer flex items-center gap-2 p-1 hover:bg-[#ad9761] rounded-md"
                   >
-                    <Image src="/items/location.svg" width={14} height={14} alt="" />
+                    <Image src="/items/Pin.svg" width={14} height={14} alt="" />
                     {item}
                   </div>
                 ))}
